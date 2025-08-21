@@ -1,5 +1,4 @@
 <template>
-  Hola
   <HeroSection />
   <BioResumen />
   <TalleresListaDestacada />
