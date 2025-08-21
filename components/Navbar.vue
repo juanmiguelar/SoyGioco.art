@@ -9,7 +9,7 @@
       v-for="item in items"
       :key="item.to"
       :to="item.to"
-      text
+      variant="text"
       class="d-none d-sm-flex"
     >{{ item.title }}</v-btn>
   </v-app-bar>
