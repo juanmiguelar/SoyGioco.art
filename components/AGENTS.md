@@ -6,6 +6,9 @@ Collection of reusable Vue components that build the site's UI, from navigation 
 - `Footer.vue` – Site footer displayed on all pages.
 - `HeroSection.vue` – Intro section with title, subtitle and call-to-action.
 - `BioResumen.vue` / `BioCompleta.vue` – Summaries and full biography content.
+- `LineaDeTiempo.vue` – Timeline showcasing professional and teaching milestones.
+- `CitaDestacada.vue` – Highlighted quote from the biography section.
+- `ContactoCTA.vue` – Reusable call-to-action linking to the contact page.
 - `GaleriaPreview.vue` / `GaleriaObras.vue` – Image gallery components.
 - `FormularioContacto.vue` – Placeholder for contact form.
 - `TallerCard.vue` and `TallerDetalleModal.vue` – Workshop listing and detail modal.
