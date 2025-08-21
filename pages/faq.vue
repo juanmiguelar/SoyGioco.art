@@ -1,0 +1,4 @@
+<template>
+  <BuscarFAQ />
+  <FAQAccordion />
+</template>
