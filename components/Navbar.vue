@@ -32,9 +32,7 @@ const drawer = ref(false)
 const items = [
   { title: 'Inicio', to: '/' },
   { title: 'Biografía', to: '/biografia' },
-  { title: 'Talleres', to: '/talleres' },
   { title: 'Servicios', to: '/servicios' },
-  { title: 'Portafolio', to: '/portafolio' },
   { title: 'Comunidad', to: '/comunidad' },
   { title: 'FAQ', to: '/faq' },
 ]
