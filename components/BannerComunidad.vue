@@ -1,24 +1,56 @@
 <template>
-  <v-container class="py-12">
-    <v-row align="center">
-      <v-col cols="12" md="6">
+  <v-container class="py-8 py-md-12">
+    <v-row align="center" justify="center">
+      <!-- Imagen - Responsive -->
+      <v-col cols="12" md="6" class="text-center">
         <v-img
-          src="https://via.placeholder.com/600x400"
+          src="/img/logo.jpg"
           alt="Comunidad Soy Gioco"
-          height="300"
-          cover
+          :max-height="$vuetify.display.mobile ? 200 : 300"
+          :max-width="$vuetify.display.mobile ? 200 : 400"
+          contain
+          class="mx-auto rounded-lg"
         />
       </v-col>
-      <v-col cols="12" md="6">
-        <h1 class="text-h4 font-weight-bold mb-2">Comunidad Exclusiva Soy Gioco</h1>
-        <p class="mb-2">
+      
+      <!-- Contenido de texto -->
+      <v-col cols="12" md="6" class="text-center text-md-left">
+        <h1 class="text-h5 text-md-h4 font-weight-bold mb-3">
+          Comunidad Exclusiva Soy Gioco
+        </h1>
+        <p class="text-body-1 mb-3">
           Comunidad cerrada para participantes de talleres. Acceso gratuito y exclusivo para
           quienes han asistido al menos a un taller.
         </p>
-        <p class="text-subtitle-1">Más de 90 miembros activos</p>
+        <v-chip
+          color="primary"
+          size="small"
+          variant="outlined"
+          class="mb-2"
+        >
+          <v-icon start icon="mdi-account-group"></v-icon>
+          Más de 90 miembros activos
+        </v-chip>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// No se necesita lógica adicional para este componente
+</script>
+
+<style scoped>
+/* Estilos adicionales para mejor responsive */
+@media (max-width: 960px) {
+  .v-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+/* Asegurar que la imagen no se desborde */
+.v-img {
+  border-radius: 8px;
+}
+</style>
