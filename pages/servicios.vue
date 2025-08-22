@@ -1,5 +1,6 @@
 <template>
-  <ServicioItem />
-  <ProcesoPasoAPaso />
+  <ServiciosSection />
   <ContactoCTA />
 </template>
+
+<script setup lang="ts"></script>
