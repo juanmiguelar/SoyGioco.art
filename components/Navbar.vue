@@ -37,6 +37,5 @@ const items = [
   { title: 'Portafolio', to: '/portafolio' },
   { title: 'Comunidad', to: '/comunidad' },
   { title: 'FAQ', to: '/faq' },
-  { title: 'Contacto', to: '/contacto' }
 ]
 </script>
