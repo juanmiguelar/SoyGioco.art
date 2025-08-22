@@ -5,21 +5,10 @@
         <h1 class="text-h3 font-weight-bold mb-4">{{ title }}</h1>
         <p class="text-subtitle-1 mb-6">{{ subtitle }}</p>
         <div class="d-flex flex-column flex-md-row gap-4">
-          <v-btn
-            color="primary"
-            class="mb-4 mb-md-0"
+          <v-btn color="primary" class="mb-4 mb-md-0"
             href="https://wa.me/50670763760?text=Hola%20Gioco%21%20Quiero%20reservar%20mi%20primer%20taller"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+            target="_blank" rel="noopener noreferrer">
             Reserva Tu Primer Taller
-          </v-btn>
-          <v-btn
-            variant="outlined"
-            color="primary"
-            to="/talleres"
-          >
-            Conoce Nuestros Talleres
           </v-btn>
         </div>
         <div class="mt-6 text-body-2">
@@ -32,21 +21,11 @@
       </v-col>
       <v-col cols="12" md="5" class="text-center">
         <!-- Main hero image - suggested size 800x600 -->
-        <v-img
-          src="/placeholder/hero-painting-class.jpg"
-          alt="Ambiente relajado de una clase de pintura"
-          height="300"
-          cover
-          class="rounded-lg mb-4"
-        />
+        <v-img src="/img/foto-principal.jpg" alt="Ambiente relajado de una clase de pintura" height="300" cover
+          position="top center" class="rounded-lg mb-4 d-none d-md-block" />
         <!-- Secondary image - suggested size 400x300 -->
-        <v-img
-          src="/placeholder/students-painting.jpg"
-          alt="Estudiantes pintando en su primer taller"
-          height="200"
-          cover
-          class="rounded-lg"
-        />
+        <v-img src="/img/taller-ejemplo.jpeg" alt="Estudiantes pintando en su primer taller" height="200" cover
+          class="rounded-lg" />
       </v-col>
     </v-row>
   </v-container>

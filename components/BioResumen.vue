@@ -4,7 +4,7 @@
       <v-col cols="12" sm="4" md="3">
         <!-- Profile image - suggested 200x200 -->
         <v-img
-          src="/placeholder/gioco-profile.jpg"
+          src="/img/gioconda-cerdas.png"
           alt="Gioconda Cerdas sonriendo"
           width="200"
           height="200"

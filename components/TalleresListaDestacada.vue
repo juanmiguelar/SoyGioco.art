@@ -33,7 +33,7 @@ const talleres: Taller[] = [
   {
     title: 'Acrílico Inicial',
     technique: 'Acrílico',
-    image: '/placeholder/taller-acrilico.jpg',
+    image: '/img/gioconda-cerdas.png',
     price: 30000,
     locations: ['GAM', 'San Ramón', 'Palmares'],
     badges: ['Perfecto para Principiantes', 'Materiales Incluidos', 'Grupos Pequeños'],
@@ -41,7 +41,7 @@ const talleres: Taller[] = [
   {
     title: 'Acuarela Relajante',
     technique: 'Acuarela',
-    image: '/placeholder/taller-acuarela.jpg',
+    image: '/img/gioconda-cerdas.png',
     price: 28000,
     locations: ['GAM', 'Grecia'],
     badges: ['Perfecto para Principiantes', 'Materiales Incluidos', 'Grupos Pequeños'],
@@ -49,7 +49,7 @@ const talleres: Taller[] = [
   {
     title: 'Paisajes Acrílicos',
     technique: 'Acrílico',
-    image: '/placeholder/taller-paisaje.jpg',
+    image: '/img/gioconda-cerdas.png',
     price: 32000,
     locations: ['San Ramón', 'Palmares'],
     badges: ['Perfecto para Principiantes', 'Materiales Incluidos', 'Grupos Pequeños', 'Taller Popular'],
@@ -57,7 +57,7 @@ const talleres: Taller[] = [
   {
     title: 'Naturaleza en Acuarela',
     technique: 'Acuarela',
-    image: '/placeholder/taller-naturaleza.jpg',
+    image: '/img/gioconda-cerdas.png',
     price: 28000,
     locations: ['GAM', 'Grecia'],
     badges: ['Perfecto para Principiantes', 'Materiales Incluidos', 'Grupos Pequeños'],
