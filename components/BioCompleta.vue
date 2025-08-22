@@ -43,7 +43,7 @@
           <p class="text-body-1 text-justify">
             Mi mayor deseo es formar estudiantes autónomos, críticos de su
             realidad y capaces de aportar una nueva mirada al mundo por medio de
-            su esencia. Está colegiada en el Colegio de Licenciados y Profesores
+            su esencia. Estoy colegiada en el Colegio de Licenciados y Profesores
             (COLYPRO) con el carné 95385.
           </p>
         </div>
