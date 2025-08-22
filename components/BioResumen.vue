@@ -1,44 +1,32 @@
 <template>
-  <v-container class="py-6">
-    <v-row align="center" justify="center">
-      <!-- Image Column -->
-      <v-col 
-        cols="12" 
-        sm="4" 
-        md="3"
-        class="text-center"
-      >
-        <img
+  <v-container class="py-12">
+    <v-row align="center" justify="center" class="text-center text-sm-left">
+      <v-col cols="12" sm="4" md="3">
+        <!-- Profile image - suggested 200x200 -->
+        <v-img
           src="/img/gioconda-cerdas.png"
-          alt="Gioconda Cerdas Agüero"
-          class="rounded-circle elevation-3"
-          style="
-            max-width: 200px; 
-            width: 100%; 
-            height: auto;
-            object-fit: cover;
-          "
+          alt="Gioconda Cerdas sonriendo"
+          width="200"
+          height="200"
+          cover
+          class="rounded-circle mx-auto"
         />
       </v-col>
-      
-      <!-- Content Column -->
-      <v-col 
-        cols="12" 
-        sm="8" 
-        md="9"
-      >
-        <div class="pl-sm-4">
-          <h2 class="text-h5 text-md-h4 font-weight-medium mb-3 text-center text-sm-left">
-            Sobre mí
-          </h2>
-          
-          <p class="text-body-1 text-justify mb-0">
-            Gioconda Cerdas Agüero es educadora artística con más de ocho años de
-            experiencia diseñando planeamientos, talleres y eventos que inspiran a
-            niños, jóvenes y adultos a expresarse por medio de las artes plásticas.
-          </p>
-        </div>
+      <v-col cols="12" sm="8" md="7">
+        <h2 class="text-h5 font-weight-medium mb-4">Sobre mí</h2>
+        <p class="text-body-1 mb-4">
+          Soy Gioconda Cerdas y durante más de ocho años he acompañado a
+          <strong>300+ estudiantes</strong> en sus primeras pinceladas. Mi pasión
+          es crear un ambiente cálido donde cualquier principiante se sienta
+          en casa, sin tecnicismos ni presiones. Cada taller está diseñado para
+          que descubras tu creatividad a tu propio ritmo.
+        </p>
+        <v-btn variant="text" color="primary" to="/biografia">
+          Conoce más sobre Gioco
+        </v-btn>
       </v-col>
     </v-row>
   </v-container>
 </template>
+
+<script setup lang="ts"></script>
