@@ -10,11 +10,12 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "nuxt": "^4.0.3",
-    "vuetify": "^3.6.0",
-    "@mdi/font": "^7.4.47"
+    "vuetify": "^3.6.0"
   },
   "devDependencies": {
+    "nuxt-simple-sitemap": "^4.4.1",
     "vite-plugin-vuetify": "^2.0.4"
   }
 }

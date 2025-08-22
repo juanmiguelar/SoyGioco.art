@@ -1,6 +1,6 @@
 <template>
   <v-container class="py-12">
-    <h1 class="text-h4 text-center mb-8">Servicios</h1>
+    <h2 class="text-h4 text-center mb-8">Servicios</h2>
     <v-row>
       <v-col cols="12" md="6">
         <ServicioCard

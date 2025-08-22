@@ -28,9 +28,9 @@
         lg="9"
       >
         <div class="pl-md-4">
-          <h1 class="text-h4 text-md-h3 font-weight-bold mb-4 text-center text-md-left">
+          <h2 class="text-h4 text-md-h3 font-weight-bold mb-4 text-center text-md-left">
             Gioconda Cerdas Agüero
-          </h1>
+          </h2>
           
           <p class="text-body-1 mb-4 text-justify">
             Educadora con énfasis en Artes Visuales y más de 8 años de experiencia
