@@ -3,7 +3,7 @@
     class="whatsapp-btn"
     color="success"
     icon="mdi-whatsapp"
-    href="https://wa.me/1234567890"
+    href="https://wa.me/50670763760?text=Hola%20Gioco%21%20Quiero%20reservar%20un%20taller"
     target="_blank"
   />
 </template>
