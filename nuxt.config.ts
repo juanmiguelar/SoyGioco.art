@@ -3,7 +3,7 @@ import vuetify from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['nuxt-simple-sitemap'],
+  modules: ['nuxt-simple-sitemap', '@nuxt/content'],
   sitemap: {
     siteUrl: 'https://soygioco.art'
   },
