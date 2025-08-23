@@ -3,7 +3,7 @@
     <v-container>
       <v-row>
         <v-col cols="12" md="4" class="text-start">
-          <strong>Últimos Artículos</strong>
+          <strong>Último Artículo</strong>
           <v-list density="compact">
             <v-list-item v-for="post in latest" :key="post.slug" :to="`/blog/${post.slug}`" link>{{ post.title }}</v-list-item>
           </v-list>
@@ -24,5 +24,5 @@ const { all, load } = useBlog()
 await load()
 const latest = computed(() => [...all.value]
   .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
-  .slice(0, 3))
+  .slice(0, 1))
 </script>
