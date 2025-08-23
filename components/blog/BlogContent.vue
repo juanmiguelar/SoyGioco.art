@@ -1,13 +1,13 @@
 <template>
-  <div class="blog-content">
-    <ContentRenderer :value="post" />
-  </div>
+  <div class="blog-content" v-html="rendered" />
 </template>
 
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+import { marked } from 'marked'
+import type { BlogPost } from '~/composables/useBlog'
 
-defineProps<{ post: ParsedContent }>()
+const props = defineProps<{ post: BlogPost }>()
+const rendered = computed(() => marked.parse(props.post.content))
 </script>
 
 <style scoped>

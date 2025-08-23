@@ -18,8 +18,11 @@
 </template>
 
 <script setup lang="ts">
-import type { BlogPost } from '~/composables/useBlog'
-const { data: latest } = await useAsyncData('footer-blogs', () =>
-  queryContent<BlogPost>('blog').sort({ created_at: -1 }).limit(3).find()
-)
+import { useBlog } from '~/composables/useBlog'
+
+const { all, load } = useBlog()
+await load()
+const latest = computed(() => [...all.value]
+  .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+  .slice(0, 3))
 </script>
