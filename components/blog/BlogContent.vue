@@ -3,16 +3,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { computed } from 'vue'
 import type { BlogPost } from '~/composables/useBlog'
+import { marked } from 'marked'
 
 const props = defineProps<{ post: BlogPost }>()
-const rendered = ref('')
-
-onMounted(async () => {
-  const { marked } = await import('marked')
-  rendered.value = marked.parse(props.post.content)
-})
+const rendered = computed(() => marked.parse(props.post.content))
 </script>
 
 <style scoped>
