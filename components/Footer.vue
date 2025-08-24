@@ -2,7 +2,7 @@
   <v-footer app class="bg-grey-lighten-4">
     <v-container>
       <v-row>
-        <v-col cols="12" md="4" class="text-start">
+        <v-col cols="12" md="4" class="text-start d-none d-md-block">
           <strong>Último Artículo</strong>
           <v-list density="compact">
             <v-list-item v-for="post in latest" :key="post.slug" :to="`/blog/${post.slug}`" link>{{ post.title }}</v-list-item>
