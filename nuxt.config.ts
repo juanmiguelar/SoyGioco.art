@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['nuxt-simple-sitemap'],
   sitemap: {
-    siteUrl: 'https://soygioco.art'
+    urls: ['https://soygioco.art']
   },
   app: {
     head: {

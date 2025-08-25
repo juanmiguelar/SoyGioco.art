@@ -51,7 +51,7 @@ const jsonLd = {
 
 useHead({
   script: [
-    { type: 'application/ld+json', children: JSON.stringify(jsonLd) },
+    { type: 'application/ld+json', innerHTML: JSON.stringify(jsonLd) },
   ],
 })
 </script>
