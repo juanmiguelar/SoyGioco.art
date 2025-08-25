@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "marked": "^9.0.0",
     "nuxt": "^4.0.3",
-    "vuetify": "^3.6.0",
-    "marked": "^9.0.0"
+    "vuetify": "^3.6.0"
   },
   "devDependencies": {
-    "nuxt-simple-sitemap": "^4.4.1",
+    "@nuxtjs/sitemap": "^7.4.3",
     "vite-plugin-vuetify": "^2.0.4"
   }
 }
