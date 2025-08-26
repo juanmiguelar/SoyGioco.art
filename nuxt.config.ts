@@ -4,6 +4,12 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   modules: ['@nuxtjs/sitemap', '@nuxtjs/strapi'],
+  site: {
+    url: 'https://soygioco.art',
+    name: 'Soy Gioco Arte',
+    description: 'Talleres de acrílico y acuarela en Costa Rica',
+    defaultLocale: 'es'
+  },
   runtimeConfig: {
     public: {
       strapiURL: process.env.STRAPI_URL || '',
@@ -16,7 +22,6 @@ export default defineNuxtConfig({
     prefix: '/api'
   },
   sitemap: {
-    hostname: 'https://soygioco.art',
     gzip: true,
     routes: async () => {
       const staticRoutes = ['/', '/biografia', '/servicios', '/talleres', '/comunidad', '/faq']
