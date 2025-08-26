@@ -1,7 +1,5 @@
 import type { Ref } from 'vue'
 
-const { find } = useStrapi()
-
 export interface BlogPost {
   id: number
   slug: string
@@ -73,6 +71,8 @@ const calculateReadingTime = (content: string): number => {
 }
 
 export const useBlog = () => {
+  const { find } = useStrapi()
+
   const all: Ref<BlogPost[]> = ref([])
   const search = ref('')
   const category = ref('')
