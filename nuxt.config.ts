@@ -56,5 +56,28 @@ export default defineNuxtConfig({
       noExternal: ["vuetify"],
     },
     plugins: [vuetify()],
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('vuetify')) {
+                return 'vuetify'
+              }
+              if (id.includes('@mdi')) {
+                return 'mdi'
+              }
+              if (id.includes('@nuxtjs/strapi') || id.includes('strapi')) {
+                return 'strapi'
+              }
+              if (id.includes('marked')) {
+                return 'marked'
+              }
+              return 'vendor'
+            }
+          }
+        }
+      }
+    }
   }
 });

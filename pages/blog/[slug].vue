@@ -12,11 +12,12 @@
 
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router'
-import BlogContent from '~/components/blog/BlogContent.vue'
-import BlogNavigation from '~/components/blog/BlogNavigation.vue'
+import { defineAsyncComponent } from 'vue'
 import { useBlog } from '~/composables/useBlog'
 import { useSeo } from '~/composables/useSeo'
 
+const BlogContent = defineAsyncComponent(() => import('~/components/blog/BlogContent.vue'))
+const BlogNavigation = defineAsyncComponent(() => import('~/components/blog/BlogNavigation.vue'))
 const route = useRoute()
 const router = useRouter()
 const { fetchBlogPost, loading } = useBlog()
