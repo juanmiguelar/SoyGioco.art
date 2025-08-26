@@ -3,9 +3,20 @@ import vuetify from "vite-plugin-vuetify";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ["nuxt-simple-sitemap", "@nuxtjs/strapi"],
+  modules: ['@nuxtjs/sitemap'],
   sitemap: {
-    urls: ["https://soygioco.art"],
+    hostname: 'https://soygioco.art',
+    gzip: true,
+    routes: async () => {
+      const staticRoutes = ['/', '/biografia', '/servicios', '/talleres', '/comunidad', '/faq']
+      // TODO: add dynamic blog routes here when blog functionality is implemented
+      return staticRoutes
+    },
+    defaults: {
+      changefreq: 'weekly',
+      priority: 0.8,
+      lastmod: new Date().toISOString()
+    }
   },
   app: {
     head: {
