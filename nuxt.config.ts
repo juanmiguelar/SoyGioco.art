@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     prefix: '/api'
   },
   sitemap: {
-    routes: async () => {
+    urls: async () => {
       const staticRoutes = ['/', '/biografia', '/servicios', '/talleres', '/comunidad', '/faq']
       // TODO: add dynamic blog routes here when blog functionality is implemented
       return staticRoutes
