@@ -20,10 +20,10 @@
 <script setup lang="ts">
 import { useBlog } from '~/composables/useBlog'
 
-const { all, load } = useBlog()
+const { all, fetchBlogPosts } = useBlog()
 
 onMounted(async () => {
-  await load()
+  await fetchBlogPosts()
 })
 const latest = computed(() => [...all.value]
   .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())

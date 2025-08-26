@@ -4,6 +4,17 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   modules: ['@nuxtjs/sitemap', '@nuxtjs/strapi'],
+  runtimeConfig: {
+    public: {
+      strapiURL: process.env.STRAPI_URL || '',
+    },
+    strapiToken: process.env.STRAPI_TOKEN || ''
+  },
+  strapi: {
+    url: process.env.STRAPI_URL,
+    token: process.env.STRAPI_TOKEN,
+    prefix: '/api'
+  },
   sitemap: {
     hostname: 'https://soygioco.art',
     gzip: true,
