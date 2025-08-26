@@ -30,4 +30,5 @@ export default defineNuxtPlugin((nuxtApp) => {
 - [../AGENTS.md](../AGENTS.md)
 - [../components/AGENTS.md](../components/AGENTS.md)
 - [../layouts/AGENTS.md](../layouts/AGENTS.md)
+- [../composables/AGENTS.md](../composables/AGENTS.md)
 
