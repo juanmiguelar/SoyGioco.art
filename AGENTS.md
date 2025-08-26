@@ -1,10 +1,11 @@
 # Overview and Purpose
-SoyGioco.art is a Nuxt 4.0.3 application that showcases artwork, services and community content using Vue 3 and Vuetify for a responsive UI.
+SoyGioco.art is a Nuxt 4.0.3 application that showcases artwork, services, community content, and blog articles using Vue 3 and Vuetify for a responsive UI.
 
 # Technical Specifications
 - **Framework**: Nuxt 4.0.3 with Vue 3 Composition API
 - **UI Library**: Vuetify 3.6.0 with MDI icons
 - **Modules**: `@nuxtjs/sitemap` for SEO and `@nuxtjs/strapi` for upcoming CMS integration
+- **Libraries**: `marked` for rendering blog content
 - **Configuration**: `nuxt.config.ts` defines site metadata, custom sitemap routes and the Vite Vuetify plugin
 - **Plugins**: `plugins/vuetify.ts` registers a custom `soygioco` theme
 
@@ -31,4 +32,6 @@ export default defineNuxtConfig({
 - [layouts/AGENTS.md](layouts/AGENTS.md)
 - [plugins/AGENTS.md](plugins/AGENTS.md)
 - [public/AGENTS.md](public/AGENTS.md)
+- [composables/AGENTS.md](composables/AGENTS.md)
+- [data/AGENTS.md](data/AGENTS.md)
 

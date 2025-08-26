@@ -32,4 +32,5 @@ Layout templates that wrap page content and provide persistent UI elements like 
 - [../AGENTS.md](../AGENTS.md)
 - [../components/AGENTS.md](../components/AGENTS.md)
 - [../pages/AGENTS.md](../pages/AGENTS.md)
+- [../composables/AGENTS.md](../composables/AGENTS.md)
 

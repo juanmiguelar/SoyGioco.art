@@ -1,10 +1,11 @@
 # Overview and Purpose
-Reusable Vue components that assemble the application's UI, from navigation to galleries and contact forms.
+Reusable Vue components that assemble the application's UI, from navigation to galleries, blog interfaces, and contact forms.
 
 # Technical Specifications
 - Built with Vue 3 `<script setup lang="ts">`
 - Styled using Vuetify 3.6.0 components and utility classes
 - Auto-registered by Nuxt 4 when placed in this directory
+- Blog components under `components/blog/` render Strapi content and markdown
 
 # Usage Examples
 ```vue
@@ -27,4 +28,5 @@ Reusable Vue components that assemble the application's UI, from navigation to g
 - [../pages/AGENTS.md](../pages/AGENTS.md)
 - [../layouts/AGENTS.md](../layouts/AGENTS.md)
 - [../plugins/AGENTS.md](../plugins/AGENTS.md)
+- [../composables/AGENTS.md](../composables/AGENTS.md)
 
