@@ -6,10 +6,13 @@
 </template>
 
 <script setup lang="ts">
-import { marked } from 'marked'
 import type { BlogPost } from '~/composables/useBlog'
 
 const props = defineProps<{ post: BlogPost }>()
+const html = ref('')
 
-const html = computed(() => marked.parse(props.post.content))
+onMounted(async () => {
+  const { marked } = await import('marked')
+  html.value = marked.parse(props.post.content)
+})
 </script>
