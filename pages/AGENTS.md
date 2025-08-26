@@ -1,15 +1,32 @@
-# Overview
-Page components mapped to routes. Each file corresponds to a public-facing page of the site.
+# Overview and Purpose
+Route components that render public pages for the site.
 
-# Key Files
-- `index.vue` – Homepage combining hero, biography preview, workshops, gallery, testimonials, and contact call-to-action.
-- `biografia.vue` – Detailed biography with timeline, featured quote, and contact call-to-action.
-- `talleres.vue` – Workshop listings with enrollment modal.
-- `servicios.vue`, `portafolio.vue`, `comunidad.vue`, `faq.vue`, `contacto.vue` – Additional pages assembling relevant components.
+# Technical Specifications
+- Files in this directory are automatically registered as routes by Nuxt 4
+- Pages compose UI from components and use `<script setup lang="ts">`
 
-# Dependencies
-- Compose components from the `components/` directory.
-- Routing handled automatically by Nuxt's file-based system.
+# Usage Examples
+```vue
+<script setup lang="ts">
+// page-specific logic
+</script>
 
-# Notes
-- Pages are mostly declarative templates; business logic resides in reused components.
+<template>
+  <HeroSection />
+</template>
+```
+
+# Best Practices
+- Keep templates declarative and move complex logic into reusable components or composables
+- Use descriptive Spanish file names that map directly to route paths
+- Add SEO metadata within the `<head>` helper when required
+
+# Common Issues and Solutions
+- **Unexpected route path**: ensure the file name matches the desired URL segment
+- **Large pages**: break repeated sections into smaller components to improve maintainability
+
+# Related Documentation
+- [../AGENTS.md](../AGENTS.md)
+- [../components/AGENTS.md](../components/AGENTS.md)
+- [../layouts/AGENTS.md](../layouts/AGENTS.md)
+
