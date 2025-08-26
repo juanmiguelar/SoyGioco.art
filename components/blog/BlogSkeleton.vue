@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col v-for="n in 3" :key="n" cols="12" md="4">
-      <v-skeleton-loader type="image, card-heading, card-subtitle" />
+      <v-skeleton-loader type="image, heading, subtitle" />
     </v-col>
   </v-row>
 </template>
