@@ -21,8 +21,12 @@
 import { useBlog } from '~/composables/useBlog'
 
 const { all, load } = useBlog()
-await load()
+
+onMounted(async () => {
+  await load()
+})
 const latest = computed(() => [...all.value]
   .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
   .slice(0, 1))
 </script>
+
