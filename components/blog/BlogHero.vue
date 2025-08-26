@@ -1,12 +1,9 @@
 <template>
-  <div>
-    <v-img :src="post.featured_image" :alt="post.title" height="300" cover loading="lazy" class="mb-4" />
-    <h1 class="text-h4 text-center">{{ post.title }}</h1>
+  <div class="text-center py-8">
+    <h1 class="text-h3 font-bold mb-2">Blog</h1>
+    <p class="text-subtitle-1">Inspiración y consejos artísticos</p>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { BlogPost } from '~/composables/useBlog'
-
-defineProps<{ post: BlogPost }>()
 </script>
