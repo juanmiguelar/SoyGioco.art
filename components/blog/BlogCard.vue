@@ -26,7 +26,7 @@
     </v-card-item>
     <v-spacer />
     <v-card-actions class="mt-auto">
-      <div class="text-caption">Por Gioco</div>
+      <div class="text-caption">Por {{ author }}</div>
       <v-spacer />
       <v-btn color="primary" variant="flat">Leer Artículo</v-btn>
     </v-card-actions>
@@ -38,6 +38,7 @@ import type { BlogPost } from '~/composables/useBlog'
 
 const runtimeConfig = useRuntimeConfig()
 const url = ref('')
+const author = ref('')
 
 const props = defineProps<{ post: BlogPost }>()
 
@@ -56,5 +57,6 @@ const truncatedDescription = computed(() => {
 
 onMounted(() => {
   url.value = runtimeConfig.public.strapiURL + props.post.featured_image.url
+  author.value = props.post.author
 })
 </script>
