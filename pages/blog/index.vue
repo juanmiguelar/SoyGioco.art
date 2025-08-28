@@ -3,15 +3,23 @@
     <BlogHero />
     <BlogSearch
       v-model:search="search"
-      v-model:category="category"
+      v-model:selectedCategories="selectedCategories"
       :categories="categories"
     />
+    <v-alert v-if="!loading" variant="tonal" class="mb-4">
+      {{ filtered.length }} resultados encontrados
+    </v-alert>
     <BlogSkeleton v-if="loading" />
-    <v-row v-else>
-      <v-col v-for="post in paginated" :key="post.id" cols="12" md="4">
-        <BlogCard :post="post" />
-      </v-col>
-    </v-row>
+    <div v-else>
+      <v-alert v-if="filtered.length === 0" type="warning" class="mb-4">
+        No se encontraron resultados. Intenta ajustar tu búsqueda o filtros.
+      </v-alert>
+      <v-row v-else>
+        <v-col v-for="post in paginated" :key="post.id" cols="12" sm="6" md="4" lg="3">
+          <BlogCard :post="post" />
+        </v-col>
+      </v-row>
+    </div>
     <div ref="infiniteRef"></div>
   </v-container>
 </template>
@@ -29,7 +37,7 @@ const { all, loading, fetchBlogPosts } = useBlog()
 
 onMounted(fetchBlogPosts)
 
-const { search, category, categories, paginated, hasMore, loadMorePosts } = useBlogSearch(all)
+const { search, selectedCategories, categories, filtered, paginated, hasMore, loadMorePosts } = useBlogSearch(all)
 
 const { target: infiniteRef } = useInfiniteScroll(() => {
   if (hasMore.value && !loading.value) {
