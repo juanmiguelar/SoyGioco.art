@@ -1,23 +1,32 @@
-# Overview
-Collection of reusable Vue components that build the site's UI, from navigation and galleries to forms and carousels.
+# Overview and Purpose
+Reusable Vue components that assemble the application's UI, from navigation to galleries, blog interfaces, and contact forms.
 
-# Key Files
-- `Navbar.vue` – Main navigation bar with responsive drawer.
-- `Footer.vue` – Site footer displayed on all pages.
-- `HeroSection.vue` – Intro section with title, subtitle and call-to-action.
-- `BioResumen.vue` / `BioCompleta.vue` – Summaries and full biography content.
-- `LineaDeTiempo.vue` – Timeline showcasing professional and teaching milestones.
-- `CitaDestacada.vue` – Highlighted quote from the biography section.
-- `ContactoCTA.vue` – Reusable call-to-action linking to the contact page.
-- `GaleriaPreview.vue` / `GaleriaObras.vue` – Image gallery components.
-- `FormularioContacto.vue` – Placeholder for contact form.
-- `TallerCard.vue` and `TallerDetalleModal.vue` – Workshop listing and detail modal.
-- `WhatsAppButton.vue` – Floating action button linking to WhatsApp.
+# Technical Specifications
+- Built with Vue 3 `<script setup lang="ts">`
+- Styled using Vuetify 3.6.0 components and utility classes
+- Auto-registered by Nuxt 4 when placed in this directory
+- Blog components under `components/blog/` render Strapi content and markdown
 
-# Dependencies
-- Uses Vuetify components for layout and styling.
-- Components are imported by pages and layouts to assemble each route.
+# Usage Examples
+```vue
+<template>
+  <Navbar />
+</template>
+```
 
-# Notes
-- All components use `<script setup lang="ts">` for concise TypeScript logic.
-- Add new components here to keep pages slim and modular.
+# Best Practices
+- Name components in PascalCase and keep them focused on a single responsibility
+- Type props and emitted events for maintainability
+- Share logic through composables instead of duplicating code
+
+# Common Issues and Solutions
+- **Unstyled output**: ensure pages using these components are wrapped in a layout that provides the `v-app` container
+- **Component not found**: verify the file resides in the `components/` folder for Nuxt's auto-import to work
+
+# Related Documentation
+- [../AGENTS.md](../AGENTS.md)
+- [../pages/AGENTS.md](../pages/AGENTS.md)
+- [../layouts/AGENTS.md](../layouts/AGENTS.md)
+- [../plugins/AGENTS.md](../plugins/AGENTS.md)
+- [../composables/AGENTS.md](../composables/AGENTS.md)
+

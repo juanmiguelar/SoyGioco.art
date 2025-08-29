@@ -1,24 +1,68 @@
 <template>
-  <v-row class="mb-4" align="center">
-    <v-col cols="12" md="4">
-      <v-text-field :model-value="search" @update:model-value="v => emit('update:search', v)" label="Buscar" prepend-inner-icon="mdi-magnify" clearable />
-    </v-col>
-    <v-col cols="12" md="4">
-      <v-select :items="categories" :model-value="category" @update:model-value="v => emit('update:category', v)" label="Categoría" clearable />
-    </v-col>
-    <v-col cols="12" md="4">
-      <v-select :items="sortItems" :model-value="sort" @update:model-value="v => emit('update:sort', v)" label="Ordenar" />
-    </v-col>
-  </v-row>
+  <div class="mb-4">
+    <v-text-field
+      v-model="searchModel"
+      placeholder="Buscar por título, técnica, tema o palabra clave..."
+      prepend-inner-icon="mdi-magnify"
+      :append-inner-icon="searchModel ? 'mdi-close' : undefined"
+      clearable
+      hide-details
+      @click:append-inner="searchModel = ''"
+    />
+    <v-chip-group
+      v-model="categoriesModel"
+      multiple
+      class="d-flex flex-wrap mt-2"
+    >
+      <v-chip
+        v-for="cat in categories"
+        :key="cat.name"
+        :value="cat.name"
+        variant="outlined"
+        filter
+        class="ma-1"
+        :color="categoriesModel.includes(cat.name) ? 'primary' : undefined"
+      >
+        {{ cat.name }}
+        <v-badge :content="cat.count" inline class="ml-1" color="primary" />
+      </v-chip>
+    </v-chip-group>
+    <v-btn
+      v-if="categoriesModel.length"
+      class="mt-2"
+      size="small"
+      variant="text"
+      @click="categoriesModel = []"
+    >
+      Limpiar filtros
+    </v-btn>
+  </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{ search: string; category: string; sort: string; categories: string[] }>()
-import { toRefs } from "vue"
-const emit = defineEmits(['update:search', 'update:category', 'update:sort'])
-const { search, category, sort, categories } = toRefs(props)
-const sortItems = [
-  { title: 'Más recientes', value: 'recent' },
-  { title: 'Más antiguos', value: 'old' }
-]
+interface CategoryItem {
+  name: string
+  count: number
+}
+
+const props = defineProps<{
+  search: string
+  selectedCategories: string[]
+  categories: CategoryItem[]
+}>()
+
+const emit = defineEmits<{
+  (e: 'update:search', value: string): void
+  (e: 'update:selectedCategories', value: string[]): void
+}>()
+
+const searchModel = computed({
+  get: () => props.search,
+  set: v => emit('update:search', v)
+})
+
+const categoriesModel = computed({
+  get: () => props.selectedCategories,
+  set: v => emit('update:selectedCategories', v)
+})
 </script>

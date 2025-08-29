@@ -1,31 +1,62 @@
 <template>
-  <v-card class="mb-4" elevation="2">
-    <v-row no-gutters>
-      <v-col cols="12" md="4">
-        <v-img :src="post.featured_image" :alt="post.title" height="200" cover loading="lazy" />
-      </v-col>
-      <v-col cols="12" md="8">
-        <v-card-item>
-          <v-chip size="small" class="ma-2">{{ post.category }}</v-chip>
-          <v-card-title>
-            <NuxtLink :to="`/blog/${post.slug}`">{{ post.title }}</NuxtLink>
-          </v-card-title>
-          <v-card-subtitle class="text-body-2">
-            {{ post.description.slice(0, 150) }}
-          </v-card-subtitle>
-          <BlogMeta :post="post" />
-          <v-card-actions>
-            <v-btn :to="`/blog/${post.slug}`" variant="text">Leer Más</v-btn>
-          </v-card-actions>
-        </v-card-item>
-      </v-col>
-    </v-row>
+  <v-card
+    :to="`/blog/${post.slug}`"
+    class="d-flex flex-column h-100"
+    :elevation="2"
+    rounded="lg"
+  >
+    <v-img
+      :src="url"
+      :alt="post.featured_image.alt"
+      height="200"
+      cover
+      class="rounded-t-lg"
+    />
+    <v-card-item class="pt-4">
+      <v-chip color="primary" size="small" class="mb-2" label>
+        {{ post.category }}
+      </v-chip>
+      <v-card-title class="text-h6">{{ post.title }}</v-card-title>
+      <v-card-subtitle class="text-body-2 mb-2">
+        {{ formattedDate }} · {{ post.reading_time }} min
+      </v-card-subtitle>
+      <v-card-text class="pt-0 text-body-2">
+        {{ truncatedDescription }}
+      </v-card-text>
+    </v-card-item>
+    <v-spacer />
+    <v-card-actions class="mt-auto">
+      <div class="text-caption">Por {{ author }}</div>
+      <v-spacer />
+      <v-btn color="primary" variant="flat">Leer Artículo</v-btn>
+    </v-card-actions>
   </v-card>
 </template>
 
 <script setup lang="ts">
 import type { BlogPost } from '~/composables/useBlog'
-import BlogMeta from './BlogMeta.vue'
 
-defineProps<{ post: BlogPost }>()
+const runtimeConfig = useRuntimeConfig()
+const url = ref('')
+const author = ref('')
+
+const props = defineProps<{ post: BlogPost }>()
+
+const formattedDate = computed(() =>
+  new Date(props.post.created_at).toLocaleDateString('es-ES', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  })
+)
+
+const truncatedDescription = computed(() => {
+  const desc = props.post.description || ''
+  return desc.length > 200 ? desc.slice(0, 200) + '…' : desc
+})
+
+onMounted(() => {
+  url.value = runtimeConfig.public.strapiURL + props.post.featured_image.url
+  author.value = props.post.author
+})
 </script>
