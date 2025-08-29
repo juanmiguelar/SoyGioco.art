@@ -3,13 +3,17 @@ import type { BlogPost } from './useBlog'
 
 export const useBlogSearch = (posts: Ref<BlogPost[]>) => {
   const search = ref('')
-  const category = ref('')
+  const selectedCategories = ref<string[]>([])
   const sort = ref<'recent' | 'old'>('recent')
   const page = ref(1)
   const perPage = 6
 
   const categories = computed(() => {
-    return Array.from(new Set(posts.value.map(p => p.category)))
+    const map = new Map<string, number>()
+    posts.value.forEach(p => {
+      map.set(p.category, (map.get(p.category) || 0) + 1)
+    })
+    return Array.from(map.entries()).map(([name, count]) => ({ name, count }))
   })
 
   const filtered = computed(() => {
@@ -22,8 +26,8 @@ export const useBlogSearch = (posts: Ref<BlogPost[]>) => {
         p.tags?.some(tag => tag.toLowerCase().includes(term))
       )
     }
-    if (category.value) {
-      result = result.filter(p => p.category === category.value)
+    if (selectedCategories.value.length) {
+      result = result.filter(p => selectedCategories.value.includes(p.category))
     }
     if (sort.value === 'old') {
       result = [...result].sort(
@@ -46,20 +50,21 @@ export const useBlogSearch = (posts: Ref<BlogPost[]>) => {
 
   const resetFilters = () => {
     search.value = ''
-    category.value = ''
+    selectedCategories.value = []
     sort.value = 'recent'
     page.value = 1
   }
 
-  watch([search, category, sort], () => {
+  watch([search, selectedCategories, sort], () => {
     page.value = 1
   })
 
   return {
     search,
-    category,
+    selectedCategories,
     sort,
     categories,
+    filtered,
     paginated,
     hasMore,
     loadMorePosts,

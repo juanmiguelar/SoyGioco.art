@@ -1,5 +1,10 @@
 import type { Ref } from 'vue'
 
+export interface StrapiUser {
+  id: number
+  username: string
+}
+
 export interface BlogPost {
   id: number
   slug: string
@@ -13,6 +18,7 @@ export interface BlogPost {
   meta_title?: string
   meta_description?: string
   tags?: string[]
+  author: string 
 }
 
 export interface StrapiArticle {
@@ -32,6 +38,7 @@ export interface StrapiArticle {
   meta_description?: string
   categories?: Array<{ id: number; name: string }>
   tags?: Array<{ id: number; name: string }>
+  author?: StrapiUser 
 }
 
 const transformStrapiArticle = (article: StrapiArticle): BlogPost => ({
@@ -49,7 +56,8 @@ const transformStrapiArticle = (article: StrapiArticle): BlogPost => ({
   reading_time: calculateReadingTime(article.content),
   meta_title: article.meta_title,
   meta_description: article.meta_description,
-  tags: article.tags?.map(tag => tag.name) || []
+  tags: article.tags?.map(tag => tag.name) || [],
+  author: article.author?.username || 'Autor desconocido' // Usar username del objeto author
 })
 
 const calculateReadingTime = (content: string): number => {
@@ -70,9 +78,16 @@ export const useBlog = () => {
     error.value = null
     try {
       const response = await find('articles', {
-        populate: ['featured_image', 'categories', 'tags'],
-        ...params
-      } as any)
+      populate: {
+        featured_image: true,
+        categories: true,
+        tags: true,
+        author: {
+          fields: ['username']
+        }
+      },
+      ...params
+    })
       if (response.data) {
         all.value = (response.data as unknown as StrapiArticle[]).map(transformStrapiArticle)
       }
@@ -91,7 +106,7 @@ export const useBlog = () => {
     try {
       const response = await find('articles', {
         filters: { slug },
-        populate: ['featured_image', 'categories', 'tags']
+        populate: ['featured_image', 'categories', 'tags', 'author']
       } as any)
       if (response.data && response.data.length > 0) {
         return transformStrapiArticle(response.data[0] as unknown as StrapiArticle)
