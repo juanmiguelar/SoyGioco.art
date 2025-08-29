@@ -44,7 +44,7 @@ onMounted(() => {
   }
 })
 
-const positionClass = computed(() => (scrolled.value ? 'left' : 'right'))
+const positionClass = computed(() => (scrolled.value ? 'left' : ''))
 </script>
 
 <style scoped>
@@ -52,6 +52,7 @@ const positionClass = computed(() => (scrolled.value ? 'left' : 'right'))
   --whatsapp-size: clamp(48px, 5vw, 56px);
   --whatsapp-bottom: clamp(16px, 2.5vw, 24px);
   --whatsapp-side: clamp(16px, 2.5vw, 24px);
+  --whatsapp-translate: 0;
   position: fixed;
   bottom: var(--whatsapp-bottom);
   right: var(--whatsapp-side);
@@ -59,29 +60,40 @@ const positionClass = computed(() => (scrolled.value ? 'left' : 'right'))
   height: var(--whatsapp-size);
   min-width: var(--whatsapp-size);
   border-radius: 50%;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, left 0.3s ease, right 0.3s ease, bottom 0.3s ease;
+  z-index: 9999;
+  isolation: isolate;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateX(var(--whatsapp-translate));
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .whatsapp-btn.left {
-  left: var(--whatsapp-side);
-  right: auto;
-}
-
-.whatsapp-btn.right {
-  right: var(--whatsapp-side);
-  left: auto;
+  --whatsapp-translate: calc(-100vw + var(--whatsapp-size) + 2 * var(--whatsapp-side));
 }
 
 .whatsapp-btn:hover,
 .whatsapp-btn:focus-visible {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transform: translateX(var(--whatsapp-translate)) scale(1.05);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
 }
 
 .whatsapp-btn:focus-visible {
   outline: 2px solid white;
   outline-offset: 2px;
+}
+
+.whatsapp-btn .v-icon {
+  font-size: 24px;
+  color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-btn {
+    transition: none;
+  }
 }
 </style>
