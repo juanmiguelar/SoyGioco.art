@@ -70,15 +70,6 @@ const tematicas: Tematica[] = [
     techniques: ['Acrílico', 'Acuarela'],
     difficulty: 'Intermedio',
     featured: true,
-  },
-  {
-    id: 'tim-burton',
-    title: 'Tim Burton',
-    description: 'Crea arte con el estilo gótico-fantástico característico de Burton',
-    image: 'https://placehold.co/400x300/4B0082/FFFFFF/png?text=Tim+Burton+Style',
-    techniques: ['Acrílico'],
-    difficulty: 'Avanzado',
-    featured: true,
-  },
+  }
 ]
 </script>
