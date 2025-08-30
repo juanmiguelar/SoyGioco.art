@@ -1,6 +1,6 @@
 <template>
   <HeroSection />
-  <TalleresListaDestacada />
+  <TematicasDestacadas />
   <GaleriaPreview />
   <BioResumen />
   <TestimoniosCarousel />
