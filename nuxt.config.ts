@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   modules: ['@nuxtjs/sitemap', '@nuxtjs/strapi'],
+  nitro: {
+    preset: 'netlify'
+  },
   site: {
     url: 'https://soygiocoart.netlify.app/',
     name: 'Soy Gioco Arte',
