@@ -4,4 +4,4 @@ publish = ".output/public"
 functions = ".output/server/functions"
 
 [build.environment]
-NODE_VERSION = "18"
+NODE_VERSION = "20"
