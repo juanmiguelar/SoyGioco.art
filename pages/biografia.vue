@@ -18,7 +18,7 @@ useSeoMeta({
   ogTitle: 'Sobre Gioco | Instructora de Arte | Talleres Costa Rica',
   ogDescription:
     'Conoce a Gioco, tu instructora de talleres de pintura en Costa Rica. Experiencia en acrílico y acuarela, especialista en principiantes.',
-  ogUrl: 'https://soygioco.art/biografia',
+  ogUrl: 'https://soygiocoart.netlify.app/biografia',
   ogImage: '/img/logo.jpg',
   twitterTitle: 'Sobre Gioco | Instructora de Arte | Talleres Costa Rica',
   twitterDescription:

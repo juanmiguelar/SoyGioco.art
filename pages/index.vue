@@ -17,7 +17,7 @@ useSeoMeta({
   ogTitle: 'Talleres de Pintura en Costa Rica | Tu Primera Obra Maestra | Soy Gioco',
   ogDescription:
     'Descubre tu artista interior con talleres de acrílico y acuarela en Costa Rica. Sin experiencia necesaria. Materiales incluidos. Reserva en GAM, San Ramón, Palmares y Grecia.',
-  ogUrl: 'https://soygioco.art/',
+  ogUrl: 'https://soygiocoart.netlify.app/',
   ogImage: '/img/logo.jpg',
   twitterTitle: 'Talleres de Pintura en Costa Rica | Tu Primera Obra Maestra | Soy Gioco',
   twitterDescription:
@@ -30,8 +30,8 @@ const jsonLd = {
     {
       '@type': 'LocalBusiness',
       name: 'Soy Gioco',
-      url: 'https://soygioco.art/',
-      image: 'https://soygioco.art/img/logo.jpg',
+      url: 'https://soygiocoart.netlify.app/',
+      image: 'https://soygiocoart.netlify.app/img/logo.jpg',
       telephone: '+506 7076 3760',
       address: {
         '@type': 'PostalAddress',

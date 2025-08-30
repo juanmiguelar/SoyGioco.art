@@ -19,7 +19,7 @@ useSeoMeta({
   ogTitle: 'Servicios de Talleres | Acrílico y Acuarela | Soy Gioco',
   ogDescription:
     'Talleres compartidos y privados de pintura. Acrílico y acuarela para todos los niveles. Precios desde ₡9,500. Reserva tu espacio.',
-  ogUrl: 'https://soygioco.art/servicios',
+  ogUrl: 'https://soygiocoart.netlify.app/servicios',
   ogImage: '/img/logo.jpg',
   twitterTitle: 'Servicios de Talleres | Acrílico y Acuarela | Soy Gioco',
   twitterDescription:

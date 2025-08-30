@@ -20,7 +20,7 @@ useSeoMeta({
   ogTitle: 'Talleres Disponibles | Técnicas de Pintura | Soy Gioco',
   ogDescription:
     'Explora nuestros talleres de acrílico y acuarela. Técnicas profesionales, materiales incluidos. San Ramón, Palmares, Grecia y GAM.',
-  ogUrl: 'https://soygioco.art/talleres',
+  ogUrl: 'https://soygiocoart.netlify.app/talleres',
   ogImage: '/img/logo.jpg',
   twitterTitle: 'Talleres Disponibles | Técnicas de Pintura | Soy Gioco',
   twitterDescription:

@@ -21,7 +21,7 @@ useSeoMeta({
   ogTitle: 'Preguntas Frecuentes | Talleres de Pintura | Soy Gioco',
   ogDescription:
     'Resuelve tus dudas sobre nuestros talleres de pintura. Materiales incluidos, reservas, métodos de pago y más información útil.',
-  ogUrl: 'https://soygioco.art/faq',
+  ogUrl: 'https://soygiocoart.netlify.app/faq',
   ogImage: '/img/logo.jpg',
   twitterTitle: 'Preguntas Frecuentes | Talleres de Pintura | Soy Gioco',
   twitterDescription:

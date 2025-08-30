@@ -37,7 +37,7 @@
 import { computed } from 'vue'
 import type { BlogPost } from '~/composables/useBlog'
 const props = defineProps<{ post: BlogPost }>()
-const url = computed(() => `https://soygioco.art/blog/${props.post.slug}`)
+const url = computed(() => `https://soygiocoart.netlify.app/blog/${props.post.slug}`)
 const message = computed(() => `Mira este artículo sobre arte: ${url.value}`)
 
 const copyLink = () => {

@@ -17,7 +17,7 @@ useSeoMeta({
   ogTitle: 'Comunidad Artística Exclusiva | Soy Gioco Costa Rica',
   ogDescription:
     'Únete a nuestra comunidad exclusiva de más de 90 artistas. Descuentos, talleres virtuales y actividades especiales. Solo para participantes.',
-  ogUrl: 'https://soygioco.art/comunidad',
+  ogUrl: 'https://soygiocoart.netlify.app/comunidad',
   ogImage: '/img/logo.jpg',
   twitterTitle: 'Comunidad Artística Exclusiva | Soy Gioco Costa Rica',
   twitterDescription:
