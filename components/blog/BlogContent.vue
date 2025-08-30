@@ -14,17 +14,19 @@
 
 <script setup lang="ts">
 import type { BlogPost } from '~/composables/useBlog'
+import { marked } from 'marked'
+
 const runtimeConfig = useRuntimeConfig();
 
 const props = defineProps<{ post: BlogPost }>()
-const html = ref('')
-const url = ref('')
 
-onMounted(async () => {
-  const { marked } = await import('marked')
-  html.value = marked.parse(props.post.content)
-  url.value = runtimeConfig.public.strapiURL + props.post?.featured_image?.url
-})
+const url = computed(() =>
+  props.post?.featured_image?.url
+    ? runtimeConfig.public.strapiURL + props.post.featured_image.url
+    : '/img/logo.jpg'
+)
+
+const html = computed(() => marked.parse(props.post.content))
 </script>
 
 <style scoped>

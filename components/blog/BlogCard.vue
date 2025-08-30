@@ -37,10 +37,16 @@
 import type { BlogPost } from '~/composables/useBlog'
 
 const runtimeConfig = useRuntimeConfig()
-const url = ref('')
-const author = ref('')
 
 const props = defineProps<{ post: BlogPost }>()
+
+const url = computed(() =>
+  props.post?.featured_image?.url
+    ? runtimeConfig.public.strapiURL + props.post.featured_image.url
+    : '/img/logo.jpg'
+)
+
+const author = computed(() => props.post.author)
 
 const formattedDate = computed(() =>
   new Date(props.post.created_at).toLocaleDateString('es-ES', {
@@ -53,10 +59,5 @@ const formattedDate = computed(() =>
 const truncatedDescription = computed(() => {
   const desc = props.post.description || ''
   return desc.length > 200 ? desc.slice(0, 200) + '…' : desc
-})
-
-onMounted(() => {
-  url.value = runtimeConfig.public.strapiURL + props.post.featured_image.url
-  author.value = props.post.author
 })
 </script>
