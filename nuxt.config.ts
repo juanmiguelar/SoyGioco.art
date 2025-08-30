@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/sitemap', '@nuxtjs/strapi'],
   site: {
-    url: 'https://soygioco.art',
+    url: 'https://soygiocoart.netlify.app/',
     name: 'Soy Gioco Arte',
     description: 'Talleres de acrílico y acuarela en Costa Rica',
     defaultLocale: 'es'
