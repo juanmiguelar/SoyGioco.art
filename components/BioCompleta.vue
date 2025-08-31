@@ -8,17 +8,20 @@
         lg="3"
         class="text-center"
       >
-        <v-img
-          :eager="true"
+        <NuxtImg
           src="/img/gioconda-cerdas.png"
           alt="Gioconda Cerdas Agüero"
           class="rounded-circle elevation-3"
           style="
-            max-width: 280px; 
-            width: 100%; 
+            max-width: 280px;
+            width: 100%;
             height: auto;
             object-fit: cover;
           "
+          loading="eager"
+          fetchpriority="high"
+          decoding="sync"
+          sizes="sm:100vw md:50vw lg:400px"
         />
       </v-col>
       

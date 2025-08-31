@@ -5,13 +5,16 @@
     :elevation="2"
     rounded="lg"
   >
-    <v-img
-      :eager="true"
+    <NuxtImg
       :src="url"
-      :alt="post.featured_image.alt"
+      :alt="post.featured_image.alt || 'Imagen'"
       height="200"
-      cover
+      style="object-fit:cover"
       class="rounded-t-lg"
+      loading="eager"
+      fetchpriority="high"
+      decoding="sync"
+      sizes="sm:100vw md:50vw lg:400px"
     />
     <v-card-item class="pt-4">
       <v-chip color="primary" size="small" class="mb-2" label>
