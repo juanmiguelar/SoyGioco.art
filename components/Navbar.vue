@@ -3,7 +3,7 @@
     <v-app-bar-nav-icon class="d-sm-none" @click="drawer = !drawer" />
     <v-toolbar-title>
       <NuxtLink to="/">
-        <v-img src="/img/logo.jpg" alt="SoyGioco Logo" style="height: 40px;" />
+        <img src="/img/logo.jpg" alt="SoyGioco Logo" style="height: 40px;" />
       </NuxtLink>
     </v-toolbar-title>
     <v-spacer />

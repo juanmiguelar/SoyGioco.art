@@ -3,7 +3,7 @@
     <v-row align="center" justify="center" class="text-center text-sm-left">
       <v-col cols="12" sm="4" md="3">
         <!-- Profile image - suggested 200x200 -->
-        <v-img
+        <img
           src="/img/gioconda-cerdas.png"
           alt="Gioconda Cerdas sonriendo"
           width="200"
