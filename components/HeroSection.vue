@@ -21,11 +21,26 @@
       </v-col>
       <v-col cols="12" md="5" class="text-center">
         <!-- Main hero image - suggested size 800x600 -->
-        <v-img :eager="true" src="/img/foto-principal.jpg" alt="Ambiente relajado de una clase de pintura" height="300" cover
-          position="top center" class="rounded-lg mb-4 d-none d-md-block" />
+        <NuxtImg
+          src="/img/foto-principal.jpg"
+          alt="Ambiente relajado de una clase de pintura"
+          width="800"
+          height="600"
+          format="webp"
+          priority
+          sizes="100vw"
+          class="rounded-lg mb-4 d-none d-md-block"
+        />
         <!-- Secondary image - suggested size 400x300 -->
-        <v-img :eager="true" src="/img/taller-ejemplo.jpeg" alt="Estudiantes pintando en su primer taller" height="200" cover
-          class="rounded-lg" />
+        <NuxtImg
+          src="/img/taller-ejemplo.jpeg"
+          alt="Estudiantes pintando en su primer taller"
+          width="400"
+          height="300"
+          format="webp"
+          loading="lazy"
+          class="rounded-lg"
+        />
       </v-col>
     </v-row>
   </v-container>

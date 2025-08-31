@@ -3,13 +3,13 @@
     <v-row align="center" justify="center" class="text-center text-sm-left">
       <v-col cols="12" sm="4" md="3">
         <!-- Profile image - suggested 200x200 -->
-        <v-img
-          :eager="true"
+        <NuxtImg
           src="/img/gioconda-cerdas.png"
           alt="Gioconda Cerdas sonriendo"
           width="200"
           height="200"
-          cover
+          format="webp"
+          loading="lazy"
           class="rounded-circle mx-auto"
         />
       </v-col>

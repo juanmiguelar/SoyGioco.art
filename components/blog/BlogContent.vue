@@ -1,13 +1,13 @@
 <template>
   <div>
-    <v-img
-      :eager="true"
+    <NuxtImg
       :src="url"
       :alt="post.featured_image.alt"
+      width="600"
       height="400"
+      format="webp"
+      priority
       class="mb-4"
-      cover
-      loading="lazy"
     />
     <div class="article-content" v-html="html" />
   </div>

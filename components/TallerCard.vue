@@ -1,12 +1,13 @@
 <template>
   <v-card class="mx-auto" max-width="344">
     <!-- Taller image - suggested 400x300 -->
-    <v-img
-      :eager="true"
+    <NuxtImg
       :src="image"
       :alt="`Proceso creativo del taller ${title}`"
+      width="400"
       height="200"
-      cover
+      format="webp"
+      loading="lazy"
     />
     <v-card-item>
       <v-card-title>{{ title }} - {{ technique }}</v-card-title>

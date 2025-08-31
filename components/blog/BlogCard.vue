@@ -5,12 +5,13 @@
     :elevation="2"
     rounded="lg"
   >
-    <v-img
-      :eager="true"
+    <NuxtImg
       :src="url"
       :alt="post.featured_image.alt"
+      width="300"
       height="200"
-      cover
+      format="webp"
+      loading="lazy"
       class="rounded-t-lg"
     />
     <v-card-item class="pt-4">

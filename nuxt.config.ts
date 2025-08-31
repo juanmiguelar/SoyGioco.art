@@ -3,7 +3,7 @@ import vuetify from "vite-plugin-vuetify";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ['@nuxtjs/sitemap', '@nuxtjs/strapi'],
+  modules: ['@nuxtjs/sitemap', '@nuxtjs/strapi', '@nuxt/image'],
   site: {
     url: 'https://soygiocoart.netlify.app/',
     name: 'Soy Gioco Arte',
@@ -31,6 +31,21 @@ export default defineNuxtConfig({
       changefreq: 'weekly',
       priority: 0.8,
       lastmod: new Date().toISOString()
+    }
+  },
+  image: {
+    quality: 80,
+    format: ['webp', 'jpg', 'png'],
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280
+    },
+    provider: 'netlify',
+    netlify: {
+      baseURL: '/_nuxt/image'
     }
   },
   app: {

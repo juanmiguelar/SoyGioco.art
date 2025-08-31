@@ -11,12 +11,14 @@
         md="4"
         lg="3"
       >
-        <v-img
-          :eager="true"
+        <NuxtImg
           :src="obra.src"
           :alt="obra.caption"
+          width="400"
           height="400"
-          cover
+          sizes="sm:50vw md:33vw lg:25vw"
+          format="webp"
+          loading="lazy"
           class="mb-2"
         />
         <p class="text-caption">{{ obra.caption }}</p>
