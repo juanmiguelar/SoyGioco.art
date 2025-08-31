@@ -3,14 +3,16 @@
     <v-row align="center" justify="center">
       <!-- Imagen - Responsive -->
       <v-col cols="12" md="6" class="text-center">
-        <v-img
+        <NuxtImg
           src="/img/logo.jpg"
           alt="Comunidad Soy Gioco"
-          :max-height="$vuetify.display.mobile ? 200 : 300"
-          :max-width="$vuetify.display.mobile ? 200 : 400"
-          contain
+          :width="$vuetify.display.mobile ? 200 : 400"
+          :height="$vuetify.display.mobile ? 200 : 300"
+          :style="{ objectFit: 'contain' }"
           class="mx-auto rounded-lg"
-          :eager="true"
+          loading="eager"
+          fetchpriority="high"
+          decoding="sync"
         />
       </v-col>
       

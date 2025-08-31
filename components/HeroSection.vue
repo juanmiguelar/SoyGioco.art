@@ -21,11 +21,13 @@
       </v-col>
       <v-col cols="12" md="5" class="text-center">
         <!-- Main hero image - suggested size 800x600 -->
-        <v-img :eager="true" src="/img/foto-principal.jpg" alt="Ambiente relajado de una clase de pintura" height="300" cover
-          position="top center" class="rounded-lg mb-4 d-none d-md-block" />
+        <NuxtImg src="/img/foto-principal.jpg" alt="Ambiente relajado de una clase de pintura" height="300"
+          style="object-fit:cover;object-position:top center" class="rounded-lg mb-4 d-none d-md-block"
+          loading="eager" fetchpriority="high" decoding="sync" sizes="sm:100vw md:50vw lg:400px" />
         <!-- Secondary image - suggested size 400x300 -->
-        <v-img :eager="true" src="/img/taller-ejemplo.jpeg" alt="Estudiantes pintando en su primer taller" height="200" cover
-          class="rounded-lg" />
+        <NuxtImg src="/img/taller-ejemplo.jpeg" alt="Estudiantes pintando en su primer taller" height="200"
+          style="object-fit:cover" class="rounded-lg" loading="eager" fetchpriority="high" decoding="sync"
+          sizes="sm:100vw md:50vw lg:400px" />
       </v-col>
     </v-row>
   </v-container>

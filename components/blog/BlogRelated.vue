@@ -4,7 +4,8 @@
     <v-row>
       <v-col v-for="p in posts" :key="p.slug" cols="12" md="4">
         <v-card :to="`/blog/${p.slug}`" elevation="1">
-          <v-img :eager="true" :src="p.featured_image" :alt="p.title" height="120" cover loading="lazy" />
+          <NuxtImg :src="p.featured_image" :alt="p.title" height="120" style="object-fit:cover"
+            loading="eager" fetchpriority="high" decoding="sync" sizes="sm:100vw md:50vw lg:400px" />
           <v-card-title class="text-body-1">{{ p.title }}</v-card-title>
         </v-card>
       </v-col>

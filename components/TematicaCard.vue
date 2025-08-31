@@ -6,12 +6,15 @@
       :elevation="isHovering ? 8 : 2"
       :style="{ transform: isHovering ? 'scale(1.02)' : 'scale(1)' }"
     >
-      <v-img
-        :eager="true"
+      <NuxtImg
         :src="image"
         :alt="alt"
         height="180"
-        cover
+        style="object-fit:cover"
+        loading="eager"
+        fetchpriority="high"
+        decoding="sync"
+        sizes="sm:100vw md:50vw lg:400px"
       />
       <v-card-item>
         <v-card-title class="text-h6">{{ title }}</v-card-title>
