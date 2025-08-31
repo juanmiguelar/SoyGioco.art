@@ -6,6 +6,7 @@
     rounded="lg"
   >
     <v-img
+      :eager="true"
       :src="url"
       :alt="post.featured_image.alt"
       height="200"

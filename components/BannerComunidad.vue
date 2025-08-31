@@ -10,6 +10,7 @@
           :max-width="$vuetify.display.mobile ? 200 : 400"
           contain
           class="mx-auto rounded-lg"
+          :eager="true"
         />
       </v-col>
       

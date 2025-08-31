@@ -1,6 +1,7 @@
 <template>
   <div>
     <v-img
+      :eager="true"
       :src="url"
       :alt="post.featured_image.alt"
       height="400"

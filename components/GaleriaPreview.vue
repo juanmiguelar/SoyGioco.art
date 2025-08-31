@@ -12,6 +12,7 @@
         lg="3"
       >
         <v-img
+          :eager="true"
           :src="obra.src"
           :alt="obra.caption"
           height="400"

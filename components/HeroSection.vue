@@ -21,10 +21,10 @@
       </v-col>
       <v-col cols="12" md="5" class="text-center">
         <!-- Main hero image - suggested size 800x600 -->
-        <v-img src="/img/foto-principal.jpg" alt="Ambiente relajado de una clase de pintura" height="300" cover
+        <v-img :eager="true" src="/img/foto-principal.jpg" alt="Ambiente relajado de una clase de pintura" height="300" cover
           position="top center" class="rounded-lg mb-4 d-none d-md-block" />
         <!-- Secondary image - suggested size 400x300 -->
-        <v-img src="/img/taller-ejemplo.jpeg" alt="Estudiantes pintando en su primer taller" height="200" cover
+        <v-img :eager="true" src="/img/taller-ejemplo.jpeg" alt="Estudiantes pintando en su primer taller" height="200" cover
           class="rounded-lg" />
       </v-col>
     </v-row>

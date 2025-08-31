@@ -7,6 +7,7 @@
       :style="{ transform: isHovering ? 'scale(1.02)' : 'scale(1)' }"
     >
       <v-img
+        :eager="true"
         :src="image"
         :alt="alt"
         height="180"

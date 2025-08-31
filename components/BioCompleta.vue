@@ -9,6 +9,7 @@
         class="text-center"
       >
         <v-img
+          :eager="true"
           src="/img/gioconda-cerdas.png"
           alt="Gioconda Cerdas Agüero"
           class="rounded-circle elevation-3"
