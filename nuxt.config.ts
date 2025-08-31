@@ -54,7 +54,7 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/jpeg", href: "/img/logo.jpg" }],
     },
   },
-  css: ["vuetify/styles", "@mdi/font/css/materialdesignicons.min.css"],
+  css: ["vuetify/styles", "@mdi/font/css/materialdesignicons.min.css", "~/assets/css/nuxt-img-styles.css"],
   build: {
     transpile: ["vuetify"],
   },

@@ -1,16 +1,18 @@
 <template>
   <div>
-    <NuxtImg
-      :src="url"
-      :alt="post.featured_image.alt || 'Imagen'"
-      height="400"
-      class="mb-4"
-      style="object-fit:cover"
-      loading="eager"
-      fetchpriority="high"
-      decoding="sync"
-      sizes="sm:100vw md:50vw lg:400px"
-    />
+    <div class="nuxt-img-container mb-4">
+      <NuxtImg
+        :src="url"
+        :alt="post.featured_image.alt || 'Imagen'"
+        width="600"
+        height="400"
+        class="nuxt-img-cover aspect-3-2"
+        loading="eager"
+        fetchpriority="high"
+        decoding="sync"
+        sizes="sm:100vw md:50vw lg:400px"
+      />
+    </div>
     <div class="article-content" v-html="html" />
   </div>
 </template>

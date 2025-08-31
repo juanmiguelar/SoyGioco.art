@@ -1,30 +1,22 @@
 <template>
   <v-container class="py-12 text-center">
     <h2 class="text-h5 font-weight-medium mb-8">Galería de Estudiantes</h2>
-    <v-row class="mb-4">
-      <v-col
-        v-for="obra in obras"
-        :key="obra.src"
-        cols="12"
-        xs="12"
-        sm="6"
-        md="4"
-        lg="3"
-      >
-        <NuxtImg
-          :src="obra.src"
-          :alt="obra.caption"
-          height="400"
-          style="object-fit:cover"
-          class="mb-2"
-          loading="eager"
-          fetchpriority="high"
-          decoding="sync"
-          sizes="sm:100vw md:50vw lg:400px"
-        />
-        <p class="text-caption">{{ obra.caption }}</p>
-      </v-col>
-    </v-row>
+    <div class="gallery-grid mb-4">
+      <div v-for="obra in obras" :key="obra.src">
+        <div class="gallery-image-container nuxt-img-container elevation-2 rounded-lg">
+          <NuxtImg
+            :src="obra.src"
+            :alt="obra.caption"
+            width="300"
+            height="225"
+            class="nuxt-img-cover aspect-4-3"
+            loading="lazy"
+            sizes="sm:100vw md:50vw lg:33vw xl:25vw"
+          />
+        </div>
+        <p class="text-caption mt-2">{{ obra.caption }}</p>
+      </div>
+    </div>
     <v-btn
       color="primary"
       href="https://www.instagram.com/soygioco.cr/"

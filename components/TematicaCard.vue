@@ -6,16 +6,19 @@
       :elevation="isHovering ? 8 : 2"
       :style="{ transform: isHovering ? 'scale(1.02)' : 'scale(1)' }"
     >
-      <NuxtImg
-        :src="image"
-        :alt="alt"
-        height="180"
-        style="object-fit:cover"
-        loading="eager"
-        fetchpriority="high"
-        decoding="sync"
-        sizes="sm:100vw md:50vw lg:400px"
-      />
+      <div class="nuxt-img-container">
+        <NuxtImg
+          :src="image"
+          :alt="alt"
+          width="240"
+          height="180"
+          class="nuxt-img-cover aspect-4-3"
+          loading="eager"
+          fetchpriority="high"
+          decoding="sync"
+          sizes="sm:100vw md:50vw lg:400px"
+        />
+      </div>
       <v-card-item>
         <v-card-title class="text-h6">{{ title }}</v-card-title>
         <v-card-subtitle class="text-body-2">

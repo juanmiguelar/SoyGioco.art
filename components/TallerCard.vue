@@ -1,16 +1,19 @@
 <template>
   <v-card class="mx-auto" max-width="344">
     <!-- Taller image - suggested 400x300 -->
-    <NuxtImg
-      :src="image"
-      :alt="`Proceso creativo del taller ${title}`"
-      height="200"
-      style="object-fit:cover"
-      loading="eager"
-      fetchpriority="high"
-      decoding="sync"
-      sizes="sm:100vw md:50vw lg:400px"
-    />
+    <div class="nuxt-img-container">
+      <NuxtImg
+        :src="image"
+        :alt="`Proceso creativo del taller ${title}`"
+        width="400"
+        height="300"
+        class="nuxt-img-cover aspect-4-3"
+        loading="eager"
+        fetchpriority="high"
+        decoding="sync"
+        sizes="sm:100vw md:50vw lg:400px"
+      />
+    </div>
     <v-card-item>
       <v-card-title>{{ title }} - {{ technique }}</v-card-title>
       <v-card-subtitle class="py-1">
