@@ -8,7 +8,7 @@ Static files served directly at the site root.
 
 # Usage Examples
 - `public/robots.txt` is available at `/robots.txt`
-- `public/img/logo.jpg` can be referenced as `<img src="/img/logo.jpg" />`
+- `public/img/logo.jpg` can be referenced as `<v-img src="/img/logo.jpg" />`
 - `public/sitemap.xml` serves the generated sitemap at `/sitemap.xml`
 
 # Best Practices

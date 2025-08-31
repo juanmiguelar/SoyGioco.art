@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img
+    <v-img
       :src="url"
       :alt="post.featured_image.alt"
       height="400"

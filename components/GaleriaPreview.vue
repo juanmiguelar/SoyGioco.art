@@ -11,7 +11,7 @@
         md="4"
         lg="3"
       >
-        <img
+        <v-img
           :src="obra.src"
           :alt="obra.caption"
           height="400"

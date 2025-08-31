@@ -8,7 +8,7 @@
         lg="3"
         class="text-center"
       >
-        <img
+        <v-img
           src="/img/gioconda-cerdas.png"
           alt="Gioconda Cerdas Agüero"
           class="rounded-circle elevation-3"

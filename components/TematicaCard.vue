@@ -6,7 +6,7 @@
       :elevation="isHovering ? 8 : 2"
       :style="{ transform: isHovering ? 'scale(1.02)' : 'scale(1)' }"
     >
-      <img
+      <v-img
         :src="image"
         :alt="alt"
         height="180"

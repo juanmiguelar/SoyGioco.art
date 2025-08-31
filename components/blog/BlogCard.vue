@@ -5,7 +5,7 @@
     :elevation="2"
     rounded="lg"
   >
-    <img
+    <v-img
       :src="url"
       :alt="post.featured_image.alt"
       height="200"

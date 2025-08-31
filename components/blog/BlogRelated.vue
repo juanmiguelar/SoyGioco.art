@@ -4,7 +4,7 @@
     <v-row>
       <v-col v-for="p in posts" :key="p.slug" cols="12" md="4">
         <v-card :to="`/blog/${p.slug}`" elevation="1">
-          <img :src="p.featured_image" :alt="p.title" height="120" cover loading="lazy" />
+          <v-img :src="p.featured_image" :alt="p.title" height="120" cover loading="lazy" />
           <v-card-title class="text-body-1">{{ p.title }}</v-card-title>
         </v-card>
       </v-col>

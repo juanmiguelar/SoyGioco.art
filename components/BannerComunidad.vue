@@ -3,7 +3,7 @@
     <v-row align="center" justify="center">
       <!-- Imagen - Responsive -->
       <v-col cols="12" md="6" class="text-center">
-        <img
+        <v-img
           src="/img/logo.jpg"
           alt="Comunidad Soy Gioco"
           :max-height="$vuetify.display.mobile ? 200 : 300"

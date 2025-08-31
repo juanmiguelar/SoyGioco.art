@@ -1,7 +1,7 @@
 <template>
   <v-card class="mx-auto" max-width="344">
     <!-- Taller image - suggested 400x300 -->
-    <img
+    <v-img
       :src="image"
       :alt="`Proceso creativo del taller ${title}`"
       height="200"
