@@ -21,13 +21,34 @@
       </v-col>
       <v-col cols="12" md="5" class="text-center">
         <!-- Main hero image - suggested size 800x600 -->
-        <NuxtImg src="/img/foto-principal.jpg" alt="Ambiente relajado de una clase de pintura" height="300"
-          style="object-fit:cover;object-position:top center" class="rounded-lg mb-4 d-none d-md-block"
-          loading="eager" fetchpriority="high" decoding="sync" sizes="sm:100vw md:50vw lg:400px" />
+        <div class="nuxt-img-container rounded-lg mb-4 d-none d-md-block">
+          <NuxtImg
+            src="/img/foto-principal.jpg"
+            alt="Ambiente relajado de una clase de pintura"
+            width="800"
+            height="600"
+            class="nuxt-img-cover aspect-4-3"
+            :style="{ objectPosition: 'top center' }"
+            loading="eager"
+            fetchpriority="high"
+            decoding="sync"
+            sizes="sm:100vw md:50vw lg:400px"
+          />
+        </div>
         <!-- Secondary image - suggested size 400x300 -->
-        <NuxtImg src="/img/taller-ejemplo.jpeg" alt="Estudiantes pintando en su primer taller" height="200"
-          style="object-fit:cover" class="rounded-lg" loading="eager" fetchpriority="high" decoding="sync"
-          sizes="sm:100vw md:50vw lg:400px" />
+        <div class="nuxt-img-container rounded-lg">
+          <NuxtImg
+            src="/img/taller-ejemplo.jpeg"
+            alt="Estudiantes pintando en su primer taller"
+            width="400"
+            height="300"
+            class="nuxt-img-cover aspect-4-3"
+            loading="eager"
+            fetchpriority="high"
+            decoding="sync"
+            sizes="sm:100vw md:50vw lg:400px"
+          />
+        </div>
       </v-col>
     </v-row>
   </v-container>

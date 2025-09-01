@@ -5,17 +5,19 @@
     :elevation="2"
     rounded="lg"
   >
-    <NuxtImg
-      :src="url"
-      :alt="post.featured_image.alt || 'Imagen'"
-      height="200"
-      style="object-fit:cover"
-      class="rounded-t-lg"
-      loading="eager"
-      fetchpriority="high"
-      decoding="sync"
-      sizes="sm:100vw md:50vw lg:400px"
-    />
+    <div class="nuxt-img-container rounded-t-lg">
+      <NuxtImg
+        :src="url"
+        :alt="post.featured_image.alt || 'Imagen'"
+        width="300"
+        height="225"
+        class="nuxt-img-cover aspect-4-3"
+        loading="eager"
+        fetchpriority="high"
+        decoding="sync"
+        sizes="sm:100vw md:50vw lg:400px"
+      />
+    </div>
     <v-card-item class="pt-4">
       <v-chip color="primary" size="small" class="mb-2" label>
         {{ post.category }}

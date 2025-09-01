@@ -3,17 +3,22 @@
     <v-row align="center" justify="center">
       <!-- Imagen - Responsive -->
       <v-col cols="12" md="6" class="text-center">
-        <NuxtImg
-          src="/img/logo.jpg"
-          alt="Comunidad Soy Gioco"
-          :width="$vuetify.display.mobile ? 200 : 400"
-          :height="$vuetify.display.mobile ? 200 : 300"
-          :style="{ objectFit: 'contain' }"
-          class="mx-auto rounded-lg"
-          loading="eager"
-          fetchpriority="high"
-          decoding="sync"
-        />
+        <div
+          class="nuxt-img-container mx-auto rounded-lg"
+          :style="{ maxWidth: $vuetify.display.mobile ? '200px' : '400px' }"
+        >
+          <NuxtImg
+            src="/img/logo.jpg"
+            alt="Comunidad Soy Gioco"
+            :width="$vuetify.display.mobile ? 200 : 400"
+            :height="$vuetify.display.mobile ? 200 : 300"
+            class="nuxt-img-contain"
+            :style="{ aspectRatio: $vuetify.display.mobile ? '1/1' : '4/3' }"
+            loading="eager"
+            fetchpriority="high"
+            decoding="sync"
+          />
+        </div>
       </v-col>
       
       <!-- Contenido de texto -->
@@ -52,8 +57,4 @@
   }
 }
 
-/* Asegurar que la imagen no se desborde */
-.v-img {
-  border-radius: 8px;
-}
 </style>

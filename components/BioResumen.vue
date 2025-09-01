@@ -3,17 +3,18 @@
     <v-row align="center" justify="center" class="text-center text-sm-left">
       <v-col cols="12" sm="4" md="3">
         <!-- Profile image - suggested 200x200 -->
-        <NuxtImg
-          src="/img/gioconda-cerdas.png"
-          alt="Gioconda Cerdas sonriendo"
-          width="200"
-          height="200"
-          style="object-fit:cover"
-          class="rounded-circle mx-auto"
-          loading="eager"
-          fetchpriority="high"
-          decoding="sync"
-        />
+        <div class="nuxt-img-container mx-auto" style="max-width: 200px">
+          <NuxtImg
+            src="/img/gioconda-cerdas.png"
+            alt="Gioconda Cerdas sonriendo"
+            width="200"
+            height="200"
+            class="nuxt-img-cover aspect-square rounded-circle"
+            loading="eager"
+            fetchpriority="high"
+            decoding="sync"
+          />
+        </div>
       </v-col>
       <v-col cols="12" sm="8" md="7">
         <h2 class="text-h5 font-weight-medium mb-4">Sobre mí</h2>

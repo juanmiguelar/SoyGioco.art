@@ -8,21 +8,19 @@
         lg="3"
         class="text-center"
       >
-        <NuxtImg
-          src="/img/gioconda-cerdas.png"
-          alt="Gioconda Cerdas Agüero"
-          class="rounded-circle elevation-3"
-          style="
-            max-width: 280px;
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-          "
-          loading="eager"
-          fetchpriority="high"
-          decoding="sync"
-          sizes="sm:100vw md:50vw lg:400px"
-        />
+        <div class="nuxt-img-container mx-auto rounded-circle elevation-3" style="max-width: 280px">
+          <NuxtImg
+            src="/img/gioconda-cerdas.png"
+            alt="Gioconda Cerdas Agüero"
+            width="280"
+            height="280"
+            class="nuxt-img-cover aspect-square"
+            loading="eager"
+            fetchpriority="high"
+            decoding="sync"
+            sizes="sm:100vw md:50vw lg:400px"
+          />
+        </div>
       </v-col>
       
       <!-- Content Column -->
